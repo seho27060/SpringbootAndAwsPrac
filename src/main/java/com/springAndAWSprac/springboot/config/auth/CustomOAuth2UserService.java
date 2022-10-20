@@ -1,7 +1,5 @@
 package com.springAndAWSprac.springboot.config.auth;
 
-
-
 import com.springAndAWSprac.springboot.config.auth.dto.OAuthAttributes;
 import com.springAndAWSprac.springboot.config.auth.dto.SessionUser;
 import com.springAndAWSprac.springboot.domain.user.User;
