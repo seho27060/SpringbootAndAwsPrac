@@ -24,7 +24,7 @@ before_deploy:
   - mv SpringbootAndAwsPrac.zip deploy/SpringbootAndAwsPrac
 
 deploy:
-  - provider: s3
+  - provider: s3 # S3 관련 설정
     access_key_id: $AWS_ACCESS_KEY
 
     secret_access_key: $AWS_SECRET_KEY
@@ -35,6 +35,21 @@ deploy:
     acl: private # zip 파일 접근을 private으로
     local_dir: deploy
     wait-until-deployed : true
+
+  - provider: codedeploy # codedeploy 관련 설정
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: my-first-springboot-build
+    key: SpringbootAndAwsPrac.zip
+
+    bundle_type: zip
+    application: my-first-web # 생성한 codeDeploy의 애플리케이션 이름
+
+    deployment_group: my-first-web-group # codedeploy의 배포 그룹 이름
+
+    region: ap-northeast-2
+    wait-until-deployed: true
 
 # CI 실행 완료 시 메일로 알람
 notifications:
