@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPOSITORY=/home/ec2-user/app/step2
-PROJECT_NAME=SpringbootandAWSprac
+PROJECT_NAME=SpringbootAndAWSprac
 
 echo "> Build 파일복사"
 
