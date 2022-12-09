@@ -21,7 +21,7 @@ script: "./gradlew clean build"
 before_deploy:
   - zip -r SpringbootAndAwsPrac *
   - mkdir -p deploy
-  - mv SpringbootAndAwsPrac.zip deploy/SpringbootAndAwsPrac
+  - mv SpringbootAndAwsPrac.zip deploy/SpringbootAndAwsPrac.zip
 
 deploy:
   - provider: s3 # S3 관련 설정
@@ -38,6 +38,7 @@ deploy:
 
   - provider: codedeploy # codedeploy 관련 설정
     access_key_id: $AWS_ACCESS_KEY
+
     secret_access_key: $AWS_SECRET_KEY
 
     bucket: my-first-springboot-build
