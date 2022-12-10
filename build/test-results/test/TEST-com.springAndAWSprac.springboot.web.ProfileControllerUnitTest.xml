@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.springAndAWSprac.springboot.web.ProfileControllerUnitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-10T05:50:11" hostname="DESKTOP-AJ66391" time="0.003">
+  <properties/>
+  <testcase name="initializing_real_profile" classname="com.springAndAWSprac.springboot.web.ProfileControllerUnitTest" time="0.002"/>
+  <testcase name="get_Active_Profile_else_get_default" classname="com.springAndAWSprac.springboot.web.ProfileControllerUnitTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
